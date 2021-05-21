@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --altura:180px;
+}
+
+.principal{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.tarjetas{
+    display: flex;
+    justify-content: space-around;
+}
+.tarjeta{
+    width: 30%;
+    border: 1px solid black;
+    box-shadow: 3px 3px 8px rgba(0, 0,0, .5);
+    padding: 25px;
+    overflow: hidden; /*no deja que se salga los elementos dentro*/
+}
+.tarjetaimg{
+    width: 100%;
+    height: var(--altura);
+    filter: sepia(.9);
+    
+    /*filter: blur(5px) (que se vea desenfocado o mas pixeleado)
+            : brightness(0 - 1)  (disminuye el brillo)    
+            : contrast(3) (aumenta el contraste)
+            : grayscale(0 - 1)  (lo vuelve blanco y negro)
+            : hue-rotate(180deg) (lo degrada de alguna manera)
+            : saturate(20) (manejo de saturacion)
+            : sepia(0 - 1)  (lo vuelve sepia modo fotos antiguas)
+    */
+
+    transform: scale(1);
+    /*
+    transform: rotate(20deg);  (rota 20GRADOS)
+             : translate(50px, 10px)   (lo traslada)
+             : scale(1.2)  ( aumenta su tamaño, por defecto es 1)
+                    tiene su eje X y Y
+             : skew (20deg)  (lo inclina de alguna manera)
+
+    */
+ 
+
+}
+
+.tarjetaimg:hover{
+    /*filter: blur(0px);
+      filter: brightness(1);
+      filter: contrast(1);
+      filter: grayscale(0);
+      filter: hue-rotate(0deg);
+      filter: saturate(0);
+      filter: sepia(0);
+
+      */
+    
+      transform: scale(2);
+
+}
+
+.texto{
+    font-size: 1.4em;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 25px;
+    transition-property: font-size;
+    /*nombre de la propiedad tambien all*/
+    transition-duration: 1s;
+    /*cuanto dura*/
+    transition-timing-function: ease;
+    /*tipo de transicion
+    https://www.bufa.es/css3-transitions/
+
+    */
+    transition-delay: 1s;
+    /*tarda al momento de iniciar*/
+
+    /* transition: all (a todos) 2s ease 1s ;
+        para resumir
+    */
+}
+
+.texto:hover{
+    font-size: 1.6em;
+}
+
+.iconos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.iconoimg{
+    width: 75px;
+}
+
+.ref{
+    color: red;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-top: 22px;
+    margin-left: -15px;
+    display: none
+}
